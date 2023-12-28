@@ -1,0 +1,720 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <!-- google fonts  -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Mulish&display=swap" rel="stylesheet">
+    <!-- google fonts  -->
+    <style>
+        @media screen and (min-width:300px) {
+            .header-area{
+                height: 40px;
+                background-color: rgba(255, 165, 2, 0.50);
+            }
+            .header{
+                height: 40px;
+                min-width: 350px;
+                margin: 0 auto;
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+                padding-top: 10px;
+                padding-left: 10px;
+                padding-right: 10px
+            }
+        
+            .nav-menu{
+                margin: 0px;
+                padding: 0px;
+                list-style: none;
+                display: flex;
+            }
+            .nav-link{
+                text-decoration: none;
+                font-size: 12px;
+                font-family: 'Mulish', sans-serif;
+                color: #373F41;
+            }
+            .header-btn{
+                margin: 0px;
+                padding: 0px;
+                display: flex;
+                justify-content: space-evenly;
+                gap: 5px;
+            }
+            .signin-btn{
+                text-decoration: none;
+                font-size: 12px;
+                color: #3C64B1;
+                font-family: 'Mulish', sans-serif;
+                padding:5px 10px ;
+            }
+            .signup-btn{
+                text-decoration: none;
+                font-size: 12px;
+                color: #fff;
+                font-family: 'Mulish', sans-serif;
+                background-color: #F73C6B;
+                padding:5px 10px ;
+                border-radius: 5px;
+            }
+            .hero-area{
+                height: 300px;
+                background-color:rgba(255, 165, 2, 0.50) ;
+                display: flex;
+            }
+            .hero{
+                height: 300px;
+                min-width: 350px;
+                margin: 0 auto;
+                background-image: url(./image/Saly-3\ \(1\).png);
+                background-size: 300px;
+                background-repeat: no-repeat;
+                padding: 0px 10px;
+            }
+            .hero-text-p{
+                color: #737B7D;
+                font-size: 14px;
+                text-align: justify;
+                font-family: 'Mulish', sans-serif;
+                line-height: 22px;
+                letter-spacing: 0.3px;
+            }
+            .hero-text-title{
+                color:#373F41 ;
+                font-family: 'Mulish', sans-serif;
+                font-size: 40px;
+                text-align: justify;
+                line-height: 46px;
+                letter-spacing: 0.2px;
+            }
+            .hero-btn{
+                text-decoration: none;
+                /* color: #F73C6B; */
+                color: #fff;
+                padding: 8px 16px;
+                /* border: 1px solid #F73C6B; */
+                background-color: #F73C6B;
+                border-radius: 8px;
+                font-size: 14px;
+                font-family: 'Mulish', sans-serif;
+                letter-spacing: 0.3px;
+                box-shadow: 4px 14px 9px 0px rgba(0,0,0,0.09);
+-webkit-box-shadow: 4px 14px 9px 0px rgba(0,0,0,0.09);
+-moz-box-shadow: 4px 14px 9px 0px rgba(0,0,0,0.09);
+            }
+            .content-area{
+                height: 320px;
+                background-color: #fff;
+                display: flex;
+            }
+            .content{
+                height: 320px;
+                min-width: 350px;
+                margin: 0 auto;
+                padding-top: 15px;
+            }
+            .content-text-single, .content-text-single1{
+                border-radius: 8px;
+                box-shadow: 0px 12px 35px 4px rgba(171, 8, 96, 0.05);
+            }
+            .content-text-single1{
+                background-color: #4F55DD;
+            }
+            .content-text-single{
+                background-color: #fff;
+            }
+            .content-single-p, .content-single-p1{
+                font-family: 'Mulish', sans-serif;
+                text-align: justify;
+                font-size: 12px;
+                line-height:18px;
+                letter-spacing: 0.3px;
+                padding: 10px;
+            }
+            .content-single-p1{
+                color:#fff ;
+            }
+            .content-single-p{
+                color:#282828 ;
+            }
+            .content-img{
+                display: none;
+            }
+            .offers-area{
+                height: 150px;
+                background-color:rgba(46, 213, 115, 0.50);
+
+            }
+            .offers{
+                height: 150px;
+                min-width: 350px;
+                margin: 0 auto;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+            }
+            .offer-title{
+                color: #4F4F4F;
+                font-size: 18px;
+                line-height: 26px;
+                text-align: left;
+                letter-spacing: 0.2px;
+                font-family: 'Mulish', sans-serif;
+                padding-right: 5px;
+                box-shadow: 0px 12px 35px 4px rgba(171, 8, 96, 0.05);
+            }
+            /* .title-line{
+                border-right:1px solid #4F4F4F;
+            } */
+            .features-img{
+                display: none;
+            }
+            .features-area{
+                height: 410px;
+                background-color: #fff;
+            }
+            .features{
+                min-width: 350px;
+                margin: 0 auto;
+                height: 410px;
+                padding-top: 30px;
+            }
+            .feature-top, .feature-bottom{
+                display: flex;
+                justify-content: center;
+            }
+            .single-feature-p{
+                color:#282828 ;
+                text-align: justify;
+                font-size: 11px;
+                line-height: 22px;
+                /* letter-spacing: 0.3px; */
+                font-family: 'Mulish', sans-serif;
+                padding: 5px;
+                background-color: #fff;
+                box-shadow: 0px 12px 35px 4px rgba(171, 8, 96, 0.05);
+            }
+            .trust-img{
+                display: none;
+            }
+            .trust-area{
+                height: 300px;
+                background-color: #fff;
+                display: flex;
+            }
+            .trust{
+                height: 300px;
+                min-width: 350px;
+                margin: 0 auto;
+                background-image: url(./image/trust-img.png);
+                background-repeat: no-repeat;
+                background-size: 300px;
+                padding: 0px 10px;
+            }
+            .trust-text-small-title{
+                color: #373F41;
+                font-family: 'Mulish', sans-serif;
+                font-size: 20px;
+                text-align: center;
+                letter-spacing: 0.2px;
+            }
+            .trust-text-title{
+                color: #373F41;
+                font-family: 'Mulish', sans-serif;
+                text-align: center;
+                font-size: 41px;
+                line-height: 48px;
+                letter-spacing: 0.2px;
+            }
+            .trust-text-p{
+                color:#4e5354 ;
+                font-family: 'Mulish', sans-serif;
+                font-size: 11px;
+                line-height: 22px;
+                letter-spacing: 0.3px;
+                /* background-color: #fff; */
+                box-shadow: 12px 12px 35px 4px rgba(171, 8, 96, 0.05);
+            }
+            .subscribe-img{
+                display: none;
+            }
+            .subscribe-area{
+                height: 170px;
+                display: flex;
+                background-color:rgba(255, 71, 87, 0.50);
+            }
+            .subscribe{
+                min-width:350px ;
+                height: 170px;
+                margin: 0 auto;
+                padding: 0px 10px;
+            }
+            .subscribe-text-title{
+                color: #4F4F4F;
+                font-family: 'Mulish', sans-serif;
+                font-size: 26px;
+                line-height: 35px;
+                letter-spacing: 0.2px;
+            }
+            .email{
+                padding: 10px 30px 10px 10px;
+                border: none;
+                border-radius: 8px;
+                margin: 0px;
+            }
+            .email:focus{
+                border: none;
+
+            }
+            .subscribe-text-form{
+                display: flex;
+                justify-content: center;
+                gap: 20px;
+            }
+            .subscribe-btn{
+                text-decoration: none;
+                background-color: #F73C6B;
+                color:#fff ;
+                font-size: 14px;
+                line-height: 18px;
+                letter-spacing: 0.2px;
+                padding: 10px 20px;
+                border-radius: 12px;
+            }
+            .support-area{
+                height: 950px;
+                background-color: #fff;
+                display: flex;
+            }
+            .support{
+                height: 950px;
+                min-width: 350px;
+                margin: 0 auto;
+                padding: 0px 10px;
+            }
+            .support-text-title{
+                color: #23242A;
+                font-size: 35px;
+                line-height: 40px;
+                font-family: 'Mulish', sans-serif;
+                text-align: center;
+            }
+            .support-single{
+                flex-direction: column;
+                display: flex;
+            }
+            .support-single-one, .support-single-two, .support-single-three{
+                background-color: #fff;
+                width: 300px;
+                align-items: center;
+                margin: 0 auto;
+                padding:10px 10px 0px 10px ;
+                border-radius:12px 12px 0px 0px ;
+                box-shadow: 10px 10px 50px 3px rgba(39, 92, 141, 0.10);
+            }
+            .support-single-title{
+                color: #23242A;
+                font-family: 'Mulish', sans-serif;
+                font-size: 30px;
+                line-height: 20px;
+            }
+            .support-single-para{
+                color:#23242A;
+                font-family: 'Mulish', sans-serif;
+                font-size: 14px;
+                line-height: 22px;
+                letter-spacing: 0.2px;
+                text-align: justify;
+                padding-bottom: 20px;
+            }
+            .support-single-bottom{
+                font-family: 'Mulish', sans-serif;
+                color: #000;
+                font-size: 16px;
+                line-height: 20px;
+                letter-spacing: -0.21px;
+                margin: 0px;
+                padding: 0px ;
+            }
+            .single-bottom{
+                width: 320px;
+                align-items: center;
+                margin: 0 auto;
+                margin-bottom: 20px;
+                box-shadow: 10px 10px 50px 3px rgba(39, 92, 141, 0.10);
+            }
+            .bottom-one{
+                background-color:  #FFD281;
+                padding: 10px;
+                border-radius: 0px 0px 12px 12px;
+            }
+            .bottom-two{
+                background-color:  #2ED57380;
+                padding: 10px;
+                border-radius: 0px 0px 12px 12px;
+            }
+            .bottom-three{
+                background-color:  #FFA3AB;
+                padding: 10px;
+                border-radius: 0px 0px 12px 12px;
+            }
+            .footer-top-area{
+                height: 500px;
+                display: flex;
+                background-color:rgba(46, 213, 115, 0.50) ;
+            }
+            .footer-top{
+                height: 500px;
+                display: flex;
+                flex-direction: column;
+                width: 350px;
+                margin: 0 auto;
+                padding: 20px 10px 0px 10px;
+            }
+            .footer-top-text-p{
+                color: #454646;
+                font-family: 'Mulish', sans-serif;
+                font-size: 14px;
+                text-align: justify;
+                line-height: 22px;
+                letter-spacing: 0.2px;
+            }
+            .footer-top-menu{
+                display: flex;
+            }
+            .footer-top-menu-title{
+                color: #000;
+                font-size: 18px;
+                line-height: 135%;
+                font-family: 'Mulish', sans-serif;
+            }
+            .footer-top-menu-ul{
+                list-style: none;
+            }
+            .footer-tip-menu-link{
+                text-decoration: none;
+                color: #555;
+                font-family: 'Mulish', sans-serif;
+                font-size: 12px;
+                line-height: 25px;
+            }
+            .city-list{
+                list-style: none;
+                display: flex;
+                justify-content: space-between;
+                padding-right: 20px;
+            }
+            .city-link{
+                text-decoration: none;
+                color: #000;
+                font-family: 'Mulish', sans-serif;
+                font-size: 14px;
+                line-height: 30px;
+                letter-spacing: -0.18px;
+            }
+            hr{
+                background-color: #000;
+            }
+            .footer-bottom-area{
+                background-color: #2ED57380;
+                display: flex;
+                height: 200px;
+            }
+            .footer-bottom{
+                height: 200px;
+                width: 350px;
+                margin: 0 auto;
+            }
+            
+            .footer-bottom-text{
+                text-align: center;
+                margin-top: 40px;
+            }
+            .footer-bottom-terms, .footer-bottom-copy{
+                color: #494949;
+                font-size: 11px;
+                font-family: 'Mulish', sans-serif;
+                letter-spacing: -0.18px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- header area start  -->
+    <div class="header-area">
+        <div class="header">
+            <div class="header-logo">
+                <img src="./image/eGENCY (1).png" alt="logo">
+            </div>
+            <div class="header-nav">
+                <ul class="nav-menu">
+                    <li class="nav-item"><a href="#" class="nav-link">Menu</a></li>
+                    <!-- s -->
+                </ul>
+            </div>
+            <div class="header-btn">
+                <a href="#" class="signin-btn">Sign In</a>
+                <a href="#" class="signup-btn">Sign Up</a>
+            </div>
+        </div>
+    </div>
+    <!-- header area end        -->
+
+    <!-- hero area start  -->
+    <div class="hero-area">
+        <div class="hero">
+            <div class="hero-text">
+                <div class="hero-para">
+                    <p class="hero-text-p">Et has minim elitr intellegat. Mea aeterno eleifend antiopam ad,
+                    nam no suscipit quaerendum. At nam minimum ponderum. Est audiam animal molestiae te. Ex duo eripuit mentitum.</p>
+                </div>
+                <div class="hero-title">
+                    <h1 class="hero-text-title">We scratch, build and play together</h1>
+                    <a href="#" class="hero-btn">Contact Us</a>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- hero area end  -->
+
+    <!-- content area start  -->
+    <div class="content-area">
+        <div class="content">
+            <div class="content-text">
+                <div class="content-text-single1">
+                    <p class="content-single-p1">Et has minim elitr intellegat. Mea aeterno eleifend antiopam ad,
+                    nam no suscipit quaerendum.Et has minim elitr intellegat. Mea aeterno eleifend antiopam ad,
+                    nam no suscipit quaerendum.</p>
+                </div>
+                <div class="content-text-single">
+                    <p class="content-single-p">Et has minim elitr intellegat. Mea aeterno eleifend antiopam ad,
+                    nam no suscipit quaerendum.Et has minim elitr intellegat. Mea aeterno eleifend antiopam ad,
+                    nam no suscipit quaerendum.</p>
+                </div>
+                <div class="content-text-single">
+                    <p class="content-single-p">Et has minim elitr intellegat. Mea aeterno eleifend antiopam ad,
+                    nam no suscipit quaerendum.Et has minim elitr intellegat. Mea aeterno eleifend antiopam ad,
+                    nam no suscipit quaerendum.</p>
+                </div>
+            </div>
+            <div class="content-img">
+                <img src="./image/content-img.png" alt="image">
+            </div>
+        </div>
+    </div>
+    <!-- content area end  -->
+
+    <!-- offers area start  -->
+    <div class="offers-area">
+        <div class="offers">
+            <h2 class="offer-title title-line">Simplify your online shipping for free this month!</h2>
+            <h2 class="offer-title">Grow your business with better Shipping organizations</h2>
+        </div>
+    </div>
+    <!-- offers area end  -->
+
+    <!-- Features area start  -->
+    <div class="features-area">
+        <div class="features">
+            <div class="features-img">
+                <img src="./image/features-img.png" alt="image">
+            </div>
+            <div class="feature-items">
+                <div class="feature-top">
+                    <div class="single-feature">
+                        <img src="./image/Bag 2.png" alt="bag-logo">
+                        <p class="single-feature-p">Et has minim elitr intellegat. Mea aeterno eleifend antiopam ad,
+                        nam no suscipit quaerendum.</p>
+                    </div>
+                    <div class="single-feature">
+                        <img src="./image/Buy.svg" alt="buy-logo">
+                        <p class="single-feature-p">Et has minim elitr intellegat. Mea aeterno eleifend antiopam ad,
+                        nam no suscipit quaerendum.</p>
+                    </div>
+                </div> 
+                <div class="feature-bottom">
+                    <div class="feature-bottom1">
+                        <div class="single-feature">
+                            <img src="./image/Ticket Star.png" alt="star-logo">
+                        <p class="single-feature-p">Et has minim elitr intellegat. Mea aeterno eleifend antiopam ad,
+                        nam no suscipit quaerendum.</p>
+                        </div>
+                        <div class="single-feature">
+                            <img src="./image/More Circle.png" alt="more-logo">
+                        <p class="single-feature-p">Et has minim elitr intellegat. Mea aeterno eleifend antiopam ad,
+                        nam no suscipit quaerendum.</p>
+                        </div>
+                    </div>
+                    <div class="feature-bottom2">
+                        <div class="single-feature">
+                            <img src="./image/More Square.png" alt="more-logo">
+                        <p class="single-feature-p">Et has minim elitr intellegat. Mea aeterno eleifend antiopam ad,
+                        nam no suscipit quaerendum.</p>
+                        </div>
+                        <div class="single-feature">
+                            <img src="./image/Discount.png" alt="more-logo">
+                        <p class="single-feature-p">Et has minim elitr intellegat. Mea aeterno eleifend antiopam ad,
+                        nam no suscipit quaerendum.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Features area end  -->
+
+    <!-- trust area start  -->
+    <div class="trust-area">
+        <div class="trust">
+            <div class="trust-img">
+                <img src="./image/trust-img.png" alt="image">
+            </div>
+            <div class="trust-text">
+                <h3 class="trust-text-small-title">We scratch, build and play together</h3>
+                <h2 class="trust-text-title">We scratch, build and play together</h2>
+                <p class="trust-text-p">Et has minim elitr intellegat. Mea aeterno eleifend antiopam ad,
+                nam no suscipit quaerendum. At nam minimum ponderum. Est audiam animal molestiae te. Ex duo eripuit mentitum.</p>
+            </div>
+        </div>
+    </div>
+    <!-- trust area end  -->
+
+    <!-- subscribe area start  -->
+    <div class="subscribe-area">
+        <div class="subscribe">
+            <div class="subscribe-text">
+                <h2 class="subscribe-text-title">
+                    Grow your business with better Shipping organizations
+                </h2>
+                <div class="subscribe-text-form">
+                    <input type="email" name="" id="" class="email" placeholder="Write your email address">
+                    <a href="#" class="subscribe-btn">Subscribe</a>
+                </div>
+            </div>
+            <div class="subscribe-img">
+                <img src="./image/subscribe-img.png" alt="subscribe-img">
+            </div>
+        </div>
+    </div>
+    <!-- subscribe area end  -->
+
+    <!-- support area start  -->
+    <div class="support-area">
+        <div class="support">
+            <div class="support-text">
+                <h2 class="support-text-title">
+                    The best design for your studio website
+                </h2>
+            </div>
+            <div class="support-single">
+                <div class="support-single-one">
+                    <h2 class="support-single-title">Audit</h2>
+                    <p class="support-single-para">Lorem ipsum dolor sit amet, consectetur adipiscing Ac aliquam ac volutpat, viverra magna risus aliquam massa. 
+                        Ac aliquam ac volutpat, viverra magna risus.
+                    </p>
+                </div>
+                <div class="single-bottom">
+                    <h3 class="support-single-bottom bottom-one">Experienced team</h3>
+                </div>
+                <div class="support-single-two">
+                    <h2 class="support-single-title">Audit</h2>
+                    <p class="support-single-para">Lorem ipsum dolor sit amet, consectetur adipiscing Ac aliquam ac volutpat, viverra magna risus aliquam massa. 
+                        Ac aliquam ac volutpat, viverra magna risus.
+                    </p>
+                </div>
+                <div class="single-bottom">
+                    <h3 class="support-single-bottom bottom-two">Experienced team</h3>
+                </div>
+                <div class="support-single-three">
+                    <h2 class="support-single-title">Audit</h2>
+                    <p class="support-single-para">Lorem ipsum dolor sit amet, consectetur adipiscing Ac aliquam ac volutpat, viverra magna risus aliquam massa. 
+                        Ac aliquam ac volutpat, viverra magna risus.
+                    </p>
+                </div>
+                <div class="single-bottom">
+                    <h3 class="support-single-bottom bottom-three">Experienced team</h3>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- support area end  -->
+
+     <!-- footer top area start -->
+     <div class="footer-top-area">
+        <div class="footer-top">
+            <div class="footer-top-text">
+                <img src="./image/eGENCY (1).png" alt="logo">
+                <p class="footer-top-text-p">Et has minim elitr intellegat. Mea aeterno eleifend antiopam ad,
+                nam no suscipit quaerendum. At nam minimum ponderum. Est audiam animal molestiae te. Ex duo eripuit mentitum. Et has
+                minim elitr intellegat. Mea aeterno eleifend antiopam ad,
+                nam no suscipit quaerendum. At nam minimum ponderum. Est audiam animal molestiae te. Ex duo eripuit mentitum.
+                 </p>
+            </div>
+            <div class="footer-top-menu">
+                <div class="foote-top-menu-list">
+                    
+                    <ul class="footer-top-menu-ul">
+                        <h3 class="footer-top-menu-title">Pages</h3>
+                        <li class="footer-top-menu-item"><a href="#" class="footer-tip-menu-link">Templates</a></li>
+                        <li class="footer-top-menu-item"><a href="#" class="footer-tip-menu-link">Price</a></li>
+                        <li class="footer-top-menu-item"><a href="#" class="footer-tip-menu-link">Help</a></li>
+                        <li class="footer-top-menu-item"><a href="#" class="footer-tip-menu-link">Contact</a></li>
+                    </ul>
+                </div>
+                <div class="foote-top-menu-list">
+                    
+                    <ul class="footer-top-menu-ul">
+                        <h3 class="footer-top-menu-title">Demos</h3>
+                        <li class="footer-top-menu-item"><a href="#" class="footer-tip-menu-link">Dark theme</a></li>
+                        <li class="footer-top-menu-item"><a href="#" class="footer-tip-menu-link">Light theme</a></li>
+                        <li class="footer-top-menu-item"><a href="#" class="footer-tip-menu-link">Classic theme</a></li>
+                    </ul>
+                </div>
+                <div class="foote-top-menu-list">
+                    
+                    <ul class="footer-top-menu-ul">
+                        <h3 class="footer-top-menu-title">Resources</h3>
+                        <li class="footer-top-menu-item"><a href="#" class="footer-tip-menu-link">Documentation</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-top-city">
+                <ul class="city-list">
+                    <li class="city-item"><a href="#" class="city-link">New York</a></li>
+                    <li class="city-item"><a href="#" class="city-link">Dubai</a></li>
+                    <li class="city-item"><a href="#" class="city-link">Dhaka</a></li>
+                    <li class="city-item"><a href="#" class="city-link">Mumbai</a></li>
+                    <li class="city-item"><a href="#" class="city-link">Sydney</a></li>
+                </ul>
+                <hr>
+            </div>
+        </div>
+     </div>
+     <!-- footer top area end -->
+
+     <!-- footer bottom area start  -->
+     <div class="footer-bottom-area">
+        <div class="footer-bottom">
+            <div class="footer-bottom-company">
+                <img src="./image/visa.png" alt="visa">
+                <img src="./image/america-express.png" alt="america">
+                <img src="./image/paypal.png" alt="payapl">
+                <img src="./image/mastercard.png" alt="mastercard">
+                <img src="./image/strip.png" alt="strip">
+                <img src="./image/bitcoin.png" alt="bitcoin">
+                <img src="./image/bancontact.png" alt="bancontact">
+            </div>
+            <div class="footer-bottom-text">
+                <p class="footer-bottom-copy">&copy; 2019-2020 All Rights Reserved.</p>
+                <p class="footer-bottom-terms">Terms of Service</p>
+            </div>
+        </div>
+     </div>
+     <!-- footer bottom area end  -->
+</body>
+</html>
